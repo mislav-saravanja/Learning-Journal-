@@ -9,18 +9,29 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 @Controller
 public class GreetingController {
 
     @Autowired
     private ExampleService exampleService;
 
+    public static int calc(int a,int b){
+        return a+b;
+    }
+
 
     @GetMapping("/greeting")
     public String greetingForm(Model model) {
         model.addAttribute("greeting", new Greeting());
-        //call service to get list of all users
-        //add them to model
+        String x = "hans";
+        int y = calc(4,50);
+        System.out.println(y);
+
+       List<Greeting> greetings = exampleService.getAllUsers();
+
+        model.addAttribute("greetings", greetings);
         return "greeting";
     }
 
