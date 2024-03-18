@@ -1,6 +1,6 @@
 #FileLock
-#Mon Mar 18 08:53:38 CET 2024
-hostName=mislav.fritz.box
-id=18e508d433c99474d629bd208c767fa49c495757c18
+#Mon Mar 18 10:25:45 CET 2024
+hostName=adduser
+id=18e50e197f77e9820de5e1aeebfaa1bc2c423aa11cc
 method=file
-server=192.168.178.73\:41811
+server=127.0.1.1\:38361
