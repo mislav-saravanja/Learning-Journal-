@@ -17,17 +17,9 @@ public class GreetingController {
     @Autowired
     private ExampleService exampleService;
 
-    public static int calc(int a,int b){
-        return a+b;
-    }
-
-
     @GetMapping("/greeting")
     public String greetingForm(Model model) {
         model.addAttribute("greeting", new Greeting());
-        String x = "hans";
-        int y = calc(4,50);
-        System.out.println(y);
 
        List<Greeting> greetings = exampleService.getAllUsers();
 
