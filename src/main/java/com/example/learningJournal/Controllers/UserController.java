@@ -25,6 +25,7 @@ public class UserController {
         this.userService = userService;
     }
 
+
     @GetMapping("/users")
     public String listUsers (Model model){
         List<UserDto> users = userService.findAllUsers();

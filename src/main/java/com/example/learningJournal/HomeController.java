@@ -10,10 +10,6 @@ public class HomeController {
         return "home";
     }
 
-    @GetMapping("/classes")
-    public String classes() {
-        return "classes";
-    }
 
     @GetMapping("/journal")
     public String journal() {

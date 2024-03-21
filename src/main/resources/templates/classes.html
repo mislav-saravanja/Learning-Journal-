@@ -1,15 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+    </style>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
 <h1>Klassen</h1>
-<button type="button">+</button>
+<a th:href="@{/classes/new}"><button type="button">+</button></a>
 <p>Klassen</p>
 
-<a href="/home">Home Page</a>
+
+<table>
+    <thead>
+    <tr>
+        <th>Class ID</th>
+        <th>Class Name</th>
+        <th>Class Description</th>
+        <th>Actions</th> <!-- Add a header for the actions -->
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="class : ${classes}">
+        <td th:text="${class.id}"></td>
+        <td th:text="${class.name}"></td>
+        <td th:text="${class.description}"></td>
+        <td>
+            <!-- Add an "Edit" button -->
+            <a th:href="@{/classes/{id}/edit(id=${class.id})}">Edit</a>
+            <!-- Add a "Delete" button -->
+            <form th:action="@{/classes/{id}/delete(id=${class.id})}" method="post">
+                <button type="submit">Delete</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<a href="/home"><button onclick="goBack()">Go Back</button></a>
+
 
 </body>
 </html>
