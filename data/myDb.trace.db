@@ -1,6 +1,0 @@
-2024-03-20 21:18:59.032949+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "LEARNING_JOURNAL" not found (this database is empty); SQL statement:
-select lj1_0.id,lj1_0.content,lj1_0.created_on,lj1_0.title,lj1_0.updated_on from learning_journal lj1_0 [42104-224]
-2024-03-20 21:18:59.943142+01:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "LEARNING_JOURNAL" not found (this database is empty); SQL statement:
-select lj1_0.id,lj1_0.content,lj1_0.created_on,lj1_0.title,lj1_0.updated_on from learning_journal lj1_0 [42104-224]
