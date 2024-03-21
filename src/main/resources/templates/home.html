@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<html xmlns:th="https://www.thymeleaf.org" lang="">
 <head>
     <title>Spring Security Example</title>
+
+    <link rel="stylesheet" th:href="@{/style/mycss.css}" type="text/css"/>
+
 </head>
 <body>
-<h1>Wilkommen</h1>
+<h1>Willkommen</h1>
 
-<button type="button">Nutzer </button>
-<button type="button">Klassen</button>
-<button type="button">Journal</button>
+<a href="/users"><button type="button">Nutzer</button></a>
+<a href="/classes"><button type="button">Klassen</button></a>
+<a href="/journal"><button type="button">Journal</button></a>
 
+<style>
+    .background-color {
+        background-color: darkturquoise;
+    }
+</style>
 </body>
-
 </html>

@@ -8,7 +8,7 @@ import lombok.Data;
 @Builder
 public class UserDto {
 
-    private Long id;
+    private long id;
     @NotEmpty(message = "First Name should not be empty")
     private String firstName;
     @NotEmpty(message = "Last Name should not be empty")

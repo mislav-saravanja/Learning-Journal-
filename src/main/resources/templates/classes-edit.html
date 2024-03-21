@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Class</title>
+</head>
+<body>
+<h1>Edit Class</h1>
+
+<form th:action="@{/classes/{classesId}/edit(classesId=${classes.id})}" th:object="${classes}" method="post">
+    <input type="hidden" th:field="*{id}" /> <!-- Hidden field to store class's ID -->
+
+    <label for="name">Class Name:</label>
+    <input type="text" id="name" th:field="*{name}" /><br/>
+    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span><br/> <!-- Display error message for name field -->
+
+    <label for="description">Class Description:</label>
+    <input type="text" id="description" th:field="*{description}" /><br/>
+    <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span><br/> <!-- Display error message for description field -->
+
+    <button type="submit">Save Changes</button>
+</form>
+</body>
+</html>
