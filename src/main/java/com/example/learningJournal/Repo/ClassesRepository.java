@@ -1,7 +1,6 @@
 package com.example.learningJournal.Repo;
 
 import com.example.learningJournal.Models.Classes;
-import com.example.learningJournal.Models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
