@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Learning Journal</title>
+</head>
+<body>
+
+<h2>Create Learning Journal</h2>
+
+<form action="/journal/new" method="post" th:object="${learningJournal}">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" th:field="*{title}" required>
+    <br>
+    <label for="content">Content:</label>
+    <textarea id="content" name="content" th:field="*{content}" required></textarea>
+    <br>
+    <button type="submit">Submit</button>
+
+
+</form>
+
+</body>
+</html>
